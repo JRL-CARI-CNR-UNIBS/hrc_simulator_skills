@@ -1,0 +1,7 @@
+outbound_pallet:
+  group_name: "ur5_on_guide"
+  # first_slot: {position: [1.3, 0.10, 1.06], quaternion: [-0.677, 0.736, -0.013, -0.010]}
+  first_slot: {position: [0.4, 0.10, 1.06], quaternion: [0, -1, 0, 0]}
+  gaps: [-0.06, 0.06, 0.06]
+  sizes: [4, 4, 1]
+  approach_distance: [0, 0, 0.07]

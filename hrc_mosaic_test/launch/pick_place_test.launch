@@ -1,0 +1,19 @@
+
+
+<launch>
+<arg name="pipeline" default="ompl" />
+
+<param if="$(eval pipeline == 'ompl')" name="planning_plugin" value="ompl_interface/OMPLPlanner" />
+<param if="$(eval pipeline == 'human_aware')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
+<rosparam command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml"/>
+
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/boxes_description.yaml"/>
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/boxes_distribution.yaml"/>
+
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/pick_place_test.yaml"/>
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/outbound_pallet.yaml"/>
+<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
+<node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" output="screen" />
+<node pkg="outbound_place" type="outbound_place_node" name="outbound_pallet" output="screen" />
+<node pkg="inbound_pick" type="inbound_pick_loader" name="inbound_pick_loader" output="screen"/>
+</launch>
