@@ -6,13 +6,21 @@
 
 int main(int argc, char **argv)
 {
-  ros::init(argc, argv, "pick_place_test");
+  ros::init(argc, argv, "mosaic_test");
   ros::NodeHandle nh;
+  ros::NodeHandle pnh("~");
   ros::AsyncSpinner spinner(4);
   spinner.start();
 
-  actionlib::SimpleActionClient<manipulation_msgs::PickObjectsAction> pick_ac("inbound_pick");
-  actionlib::SimpleActionClient<manipulation_msgs::PlaceObjectsAction> place_ac("outbound_pallet/place");
+  std::string group_name="ur5_on_guide";
+  if (!pnh.getParam("group_name",group_name))
+  {
+    ROS_ERROR("Node %s has not a parameter named group_name",pnh.getNamespace().c_str());
+    return -1;
+  }
+
+  actionlib::SimpleActionClient<manipulation_msgs::PickObjectsAction> pick_ac(group_name+"/pick");
+  actionlib::SimpleActionClient<manipulation_msgs::PlaceObjectsAction> place_ac(group_name+"/place");
 
   ROS_INFO("Waiting for pick server");
   pick_ac.waitForServer();
@@ -21,29 +29,26 @@ int main(int argc, char **argv)
   place_ac.waitForServer();
   ROS_INFO("Connection ok");
 
-  std::vector<std::string> objects;
-  objects.push_back("blue_box");
-  objects.push_back("blue_box");
-  objects.push_back("orange_box");
-  objects.push_back("blue_box");
-  objects.push_back("orange_box");
-  objects.push_back("blue_box");
-  objects.push_back("blue_box");
-  objects.push_back("orange_box");
-  objects.push_back("blue_box");
-  objects.push_back("orange_box");
+  std::map<std::string,std::string> recipe;
+  if (!pnh.getParam("recipe",recipe))
+  {
+    ROS_ERROR("Node %s has not a parameter named group_name",pnh.getNamespace().c_str());
+    return -1;
+  }
 
-  for (unsigned int ipick=0;ipick<objects.size();ipick++)
+  for (const std::pair<std::string,std::string>& object: recipe)
   {
     manipulation_msgs::PickObjectsGoal pick_goal;
-    pick_goal.object_types.push_back(objects.at(ipick));
+    ROS_INFO("Goal: pick object %s and place it in slot %s",object.second.c_str(),object.first.c_str());
+
+    pick_goal.object_types.push_back(object.second);
 
     pick_ac.sendGoalAndWait(pick_goal);
 
 
     if (pick_ac.getResult()->result<0)
     {
-      ROS_ERROR("unable to pick -> object type =%s",objects.at(ipick).c_str());
+      ROS_ERROR("unable to pick -> object type =%s",object.second.c_str());
       continue;
     }
     ROS_INFO("well done! I picked it, id=%s",pick_ac.getResult()->object_id.c_str());
@@ -51,6 +56,8 @@ int main(int argc, char **argv)
     manipulation_msgs::PlaceObjectsGoal place_goal;
     place_goal.object_type=pick_ac.getResult()->object_type;
     place_goal.object_id=pick_ac.getResult()->object_id;
+
+    place_goal.place_id=object.first;
     place_ac.sendGoalAndWait(place_goal);
 
     if (place_ac.getResult()->result<0)

@@ -1,0 +1,18 @@
+outbound_mosaic:
+  frame: "conveyor_system"
+  group_names:
+  - ur5_on_guide
+  - human_right_arm
+  slots:
+  - {name: "A1", position: [1.00, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
+  - {name: "A2", position: [1.06, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
+  - {name: "A3", position: [1.12, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
+  - {name: "A4", position: [1.18, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
+
+
+  request_adapters:
+  - default_planner_request_adapters/AddTimeParameterization
+  - default_planner_request_adapters/FixWorkspaceBounds
+  - default_planner_request_adapters/FixStartStateBounds
+  - default_planner_request_adapters/FixStartStateCollision
+  - default_planner_request_adapters/FixStartStatePathConstraints

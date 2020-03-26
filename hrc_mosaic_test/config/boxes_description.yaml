@@ -1,6 +1,3 @@
-#white_box   : {box: [0.1, 0.1, 0.1], color: [255,255,255,1.]}
-#orange_box  : {box: [0.1, 0.1, 0.1], color: [253.,173.,5.,1.]}
-#blue_box    : {box: [0.1, 0.1, 0.1], color: [38.,93.,107.,1.]}
 
 white_box   :
  box: [0.05, 0.05, 0.05]
@@ -8,6 +5,7 @@ white_box   :
  offset: [0,0,-0.025]
  grasp_poses:
  - {tool: "tip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
+ - {tool: "RightTip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
 
 
 orange_box:
@@ -16,6 +14,7 @@ orange_box:
   offset: [0,0,-0.025]
   grasp_poses:
   - {tool: "tip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
+  - {tool: "RightTip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
 
 blue_box:
   box: [0.05, 0.05, 0.05]
@@ -23,6 +22,7 @@ blue_box:
   offset: [0,0,-0.025]
   grasp_poses:
   - {tool: "tip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
+  - {tool: "RightTip", position: [0, 0, 0.005], quaternion: [1,0,0,0]}
 
 
 
