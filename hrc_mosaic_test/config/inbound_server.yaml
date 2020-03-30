@@ -1,6 +1,6 @@
 inbound:
   boxes:
-  - {name: "human_desk",    frame: "tabletop",        position: [0, 0, 0.2],         quaternion: [1, 0, 0, 0], heigth: 0.1}
+  - {name: "human_desk",    frame: "tabletop",         position: [0, 0, 0.2],         quaternion: [1, 0, 0, 0], heigth: 0.1} # vettore
   - {name: "robot_desk1",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "robot_desk2",    frame: "shopdesk",        position: [ 0.24, 0.27, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "robot_desk3",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
