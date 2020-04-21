@@ -9,6 +9,7 @@ human:
 robot:
   group_name: "ur5_on_guide"
   recipe:
-    A2: "blue_box"
     A4: "orange_box"
+    A2: "blue_box"
+
 
