@@ -1,8 +1,8 @@
 human:
   group_name: "human_right_arm"
   recipe:
-    A1: "blue_box"
     A3: "white_box"
+    A1: "blue_box"
 
 
 
