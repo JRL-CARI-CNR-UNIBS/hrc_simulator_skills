@@ -44,12 +44,12 @@ inbound:
   - {type: "blue_box",   frame: "conveyor_system", position: [2.56, 0.22 ,0.05],  quaternion: [0, 0, 0, 1], inbound: "common_desk3"}
   - {type: "blue_box",   frame: "conveyor_system", position: [2.56, 0.34 ,0.05],  quaternion: [0, 0, 0, 1], inbound: "common_desk3"}
 
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.60, 0.1 , 0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.60, 0.22 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.60, 0.34 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.72, 0.1 , 0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.72, 0.22 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
-  - {type: "blue_box",   frame: "conveyor_system", position: [1.72, 0.34 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.68, 0.1 , 0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.68, 0.22 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.68, 0.34 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.80, 0.1 , 0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.80, 0.22 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
+  - {type: "blue_box",   frame: "conveyor_system", position: [2.80, 0.34 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk2"}
   - {type: "blue_box",   frame: "conveyor_system", position: [1.84, 0.1 , 0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk4"}
   - {type: "blue_box",   frame: "conveyor_system", position: [1.84, 0.22 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk4"}
   - {type: "blue_box",   frame: "conveyor_system", position: [1.84, 0.34 ,0.05], quaternion: [0, 0, 0, 1], inbound: "common_desk4"}
