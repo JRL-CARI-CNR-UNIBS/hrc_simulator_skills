@@ -12,16 +12,15 @@ request_adapters:
 
 locations:
   ur5_on_guide:
-    pippo: [0.5, 2.202106422119922, -0.900760095473074, 1.2384984758756132, -1.9085346608724167, -1.5707965019457077, 0.41631028993076113]
-    pluto: [0.5, 2.202106422119922, -0.900760095473074, 1.2384984758756132, -1.9085346608724167, -1.5707965019457077, 0.41631028993076113]
+    away: [0.5, 2.202106422119922, -0.900760095473074, 1.2384984758756132, -1.9085346608724167, -1.5707965019457077, 0.41631028993076113]
 
   human_right_arm :
-    away: [0.001, 0.002, 0.003,  0.004,0.005,  0.006, 0.33, 0.007,    0.87, 0.008, 0.009, 0.010]
-
+    away: [-1.7, 0.002, 0.003,  0.004,0.005,  0.006, 0.33, 0.007,    0.87, 0.008, 0.009, 0.010]
 
 
 #name: [Belly_rotx, Belly_roty, jRightShoulder_rotx, jRightShoulder_roty, jRightShoulder_rotz,
-  #jRightElbow_rotz, jRightWristRoll, jRightWristPitch, jRightWristYaw, jLeftShoulder_rotx,
-  #jLeftShoulder_roty, jLeftShoulder_rotz, jLeftElbow_rotz, joint_traslx, joint_trasly,
-  #joint_orientation]
-#position: [0.0, 0.0, 0.0, 0.33, 0.0, 0.8700000000000001, 0.0, 0.0, 0.0, -1.2756961155408528, 1.352749709039926e-05, -9.380312701687217e-05, -7.660039092879742e-05, 0.0, 0.0, 0.0]
+#  jRightElbow_rotz, jRightWristRoll, jRightWristPitch, jRightWristYaw, jLeftShoulder_rotx,
+#  jLeftShoulder_roty, jLeftShoulder_rotz, jLeftElbow_rotz, joint_traslx, joint_trasly,
+#  joint_orientation]
+#position: [0.004, 0.005, 0.006, 0.33, 0.007000000000000001, 0.8700000000000001, 0.008, 0.009, 0.01, -1.2756961155408528, 1.352749709039926e-05, -9.380312701687217e-05, -7.660039092879742e-05, 0.001, 0.002, 0.003]
+
