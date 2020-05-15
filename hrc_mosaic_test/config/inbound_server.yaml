@@ -1,12 +1,12 @@
 inbound:
   boxes:
-  - {name: "human_desk",     frame: "tabletop",        position: [0, 0, 0.2],         quaternion: [1, 0, 0, 0], heigth: 0.1} # vettore
+  - {name: "human_desk",     frame: "tabletop",        position: [0.25, 0.1, 0.05],         quaternion: [1, 0, 0, 0], heigth: 0.1} # vettore
   - {name: "robot_desk1",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "robot_desk2",    frame: "shopdesk",        position: [ 0.24, 0.27, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "robot_desk3",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "robot_desk4",    frame: "shopdesk",        position: [-0.24, 0.27, 0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "common_desk1",   frame: "conveyor_system", position: [ 2.14, 0.22 ,0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
-  - {name: "common_desk2",   frame: "conveyor_system", position: [ 1.60, 0.22 ,0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
+  - {name: "common_desk2",   frame: "conveyor_system", position: [ 2.70, 0.22 ,0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "common_desk3",   frame: "conveyor_system", position: [ 2.38, 0.22 ,0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
   - {name: "common_desk4",   frame: "conveyor_system", position: [ 1.90, 0.22 ,0.05], quaternion: [1, 0, 0, 0], heigth: 0.1}
 
@@ -18,11 +18,11 @@ inbound_pick_server:
   ur5_on_guide:
     preferred_configuration: [0, 0.12148919851174578, -1.5708510080149396, 1.5708846511438024, -1.5707174686924554, -1.570702119416697, 0]
     preferred_configuration_weight: [0, 0, 1, 1, 1, 1, 0]
-    max_ik_goal_number: 20
+    max_ik_goal_number: 50
   human_right_arm:
     preferred_configuration:  [0.05512000712994486, -4.791260282509029e-05, 2.2936893766745914e-05, -4.4732665177434683e-05, 6.696755304001272e-05, 0.00863087218599394, 0.33846703945393675, 0.7506828152967152, 0.8765038004592526, 0.3644512938509695, -0.017490829046675933, -0.15624173140022904]
     preferred_configuration_weight: [0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
-    max_ik_goal_number: 20
+    max_ik_goal_number: 50
 
 
   request_adapters:

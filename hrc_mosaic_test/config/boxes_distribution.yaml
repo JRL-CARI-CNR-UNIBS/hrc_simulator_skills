@@ -1,19 +1,19 @@
 inbound:
   objects:
-  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.05, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.17, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.29, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.05, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.17, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.29, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.05, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.17, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.29, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.05, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.17, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.29, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.53, 0.05, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
-  - {type: "white_box",  frame: "tabletop",        position: [0.53, 0.17, 0.10], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.05, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.17, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.05, 0.29, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.05, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.17, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.17, 0.29, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.05, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.17, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.29, 0.29, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.05, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.17, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.41, 0.29, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.53, 0.05, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
+  - {type: "white_box",  frame: "tabletop",        position: [0.53, 0.17, 0.05], quaternion: [0, 0, 0, 1], inbound: "human_desk"}
 
 
   - {type: "orange_box", frame: "shopdesk",        position: [0.12,  0.33, 0.05],   quaternion: [0, 0, 0, 1], inbound: "robot_desk1"}
