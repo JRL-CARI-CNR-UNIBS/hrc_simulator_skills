@@ -1,4 +1,4 @@
-
+<?xml version="1.0"?>
 
 <launch>
 <arg name="pipeline" default="ompl" />
@@ -15,23 +15,24 @@
 <node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
 
 <node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" output="screen" >
-  <param if="$(eval pipeline == 'ompl')" name="planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/inbound_ik_solutions.yaml"/>
 </node>
 
 <node pkg="outbound_place"  type="mosaic" name="outbound_mosaic" output="screen">
-  <param if="$(eval pipeline == 'ompl')" name="planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param if="$(eval pipeline == 'dirrt')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/mosaic_ik_solutions.yaml"/>
 </node>
 
 <node pkg="go_to_location"  type="node" name="goto_server" output="screen">
-  <param if="$(eval pipeline == 'ompl')" name="planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param if="$(eval pipeline == 'dirrt')" name="planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/goto_server.yaml"/>
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/goto_server.yaml"/>
 </node>
 
 <node pkg="inbound_pick"  type="inbound_pick_loader" name="inbound_pick_loader" output="screen"/>
