@@ -12,7 +12,6 @@
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/inbound_server.yaml"/>
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/outbound_mosaic.yaml"/>
 
-<node pkg="object_loader" name="context_manager_node" type="context_manager_node" respawn="true" output="screen"/>
 
 <node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" output="screen" >
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
