@@ -25,3 +25,9 @@ add_dependencies(      node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTE
 target_link_libraries( node
    ${catkin_LIBRARIES}
 )
+
+add_executable(        test_sincro src/test_sincro.cpp)
+add_dependencies(      test_sincro ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries( test_sincro
+   ${catkin_LIBRARIES}
+)
