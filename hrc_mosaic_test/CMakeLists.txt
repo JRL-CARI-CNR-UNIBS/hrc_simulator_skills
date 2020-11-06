@@ -31,3 +31,10 @@ add_dependencies(      test_sincro ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_
 target_link_libraries( test_sincro
    ${catkin_LIBRARIES}
 )
+
+
+add_executable(        test_asincro src/test_asincro.cpp)
+add_dependencies(      test_asincro ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+target_link_libraries( test_asincro
+   ${catkin_LIBRARIES}
+)

@@ -44,8 +44,12 @@ int main(int argc, char **argv)
   place_ac2.waitForServer();
   ROS_INFO("Connection ok");
 
+  ros::Time t0=ros::Time::now();
+  unsigned int trial=0;
   while (ros::ok())
   {
+    ROS_INFO("Trial %u, time from start = %f seconds",trial++,(ros::Time::now()-t0).toSec());
+
     std::map<std::string,std::string> recipe1;
     if (!nh.getParam(group1+"/recipe",recipe1))
     {
@@ -67,7 +71,7 @@ int main(int argc, char **argv)
       std::map<std::string,std::string>::iterator item1 = recipe1.begin();
       std::advance( item1,  rand() % recipe1.size() );
       manipulation_msgs::PickObjectsGoal pick_goal1;
-      ROS_INFO("[Group %s] Goal: pick object %s and place it in slot %s",group1.c_str(),item1->second.c_str(),item1->first.c_str());
+      ROS_DEBUG("[Group %s] Goal: pick object %s and place it in slot %s",group1.c_str(),item1->second.c_str(),item1->first.c_str());
       pick_goal1.object_types.push_back(item1->second);
       pick_ac1.sendGoal(pick_goal1);
 
@@ -75,7 +79,7 @@ int main(int argc, char **argv)
       std::map<std::string,std::string>::iterator item2 = recipe2.begin();
       std::advance( item2,  rand() % recipe2.size() );
       manipulation_msgs::PickObjectsGoal pick_goal2;
-      ROS_INFO("[Group %s] Goal: pick object %s and place it in slot %s",group2.c_str(),item2->second.c_str(),item2->first.c_str());
+      ROS_DEBUG("[Group %s] Goal: pick object %s and place it in slot %s",group2.c_str(),item2->second.c_str(),item2->first.c_str());
       pick_goal2.object_types.push_back(item2->second);
       pick_ac2.sendGoal(pick_goal2);
 
@@ -91,7 +95,7 @@ int main(int argc, char **argv)
       {
         ROS_ERROR("[Group %s] unable to pick -> object type =%s",group2.c_str(),item2->second.c_str());
       }
-      ROS_INFO("[Group %s] well done! I picked it, id=%s",pnh.getNamespace().c_str(),pick_ac1.getResult()->object_id.c_str());
+      ROS_DEBUG("[Group %s] well done! I picked it, id=%s",pnh.getNamespace().c_str(),pick_ac1.getResult()->object_id.c_str());
 
       manipulation_msgs::PlaceObjectsGoal place_goal1;
       place_goal1.object_type=pick_ac1.getResult()->object_type;
