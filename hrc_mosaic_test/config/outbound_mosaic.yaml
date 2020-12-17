@@ -3,6 +3,8 @@ outbound_mosaic:
   groups:
     ur5_on_guide: tip
     human_right_arm: RightTip
+
+
   slots:
   - {name: "A1", position: [1.54, 0.10, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
   - {name: "A2", position: [1.54, 0.16, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, 0.07]}
