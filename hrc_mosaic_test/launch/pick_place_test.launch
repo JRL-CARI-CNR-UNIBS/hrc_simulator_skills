@@ -4,6 +4,7 @@
 <arg name="pipeline" default="ompl" />
 <arg name="load_param" default="load" />
 <arg name="single_goal" default="false" />
+<arg name="disable_collision" default="false" />
 
 <rosparam command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml"/>
 
@@ -14,10 +15,12 @@
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/outbound_mosaic.yaml"/>
 
 
+
 <node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" output="screen" >
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
+  <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
   <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/inbound_ik_solutions.yaml"/>
 </node>
@@ -26,6 +29,7 @@
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
+  <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
   <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/mosaic_ik_solutions.yaml"/>
 </node>
