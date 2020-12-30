@@ -2,11 +2,14 @@
 
 <launch>
 <arg name="pipeline" default="ompl" />
+<!--<arg name="mao_planner" default="ha_planner/DgacoPlannerManager" />-->
+<arg name="mao_planner" default="pathplan/DIRRTStar" />
 <arg name="load_param" default="load" />
 <arg name="single_goal" default="false" />
 <arg name="disable_collision" default="false" />
 
-<rosparam command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml"/>
+<rosparam if="$(eval pipeline == 'human_aware')" command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml"/>
+<rosparam if="$(eval pipeline == 'dirrt')" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml"/>
 
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/boxes_description.yaml"/>
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/boxes_distribution.yaml"/>
@@ -19,25 +22,28 @@
 <node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" output="screen" >
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
   <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
-  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/inbound_ik_solutions.yaml"/>
 </node>
 
 <node pkg="outbound_place"  type="mosaic" name="outbound_mosaic" output="screen"  >
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
   <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
-  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />
   <rosparam if="$(eval load_param == 'load')" command="load" file="$(find hrc_mosaic_test)/config/mosaic_ik_solutions.yaml"/>
 </node>
 
 <node pkg="go_to_location"  type="node" name="goto_server" output="screen">
   <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
   <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param name="human_right_arm/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
+  <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />
    <rosparam command="load" file="$(find hrc_mosaic_test)/config/goto_server.yaml"/>
 </node>
 
