@@ -70,7 +70,7 @@ int main(int argc, char **argv)
       place_goal.object_type=pick_ac.getResult()->object_type;
       place_goal.object_id=pick_ac.getResult()->object_id;
 
-      place_goal.place_id=object.first;
+      place_goal.place_id.push_back(object.first);
       place_ac.sendGoalAndWait(place_goal);
 
       if (place_ac.getResult()->result<0)

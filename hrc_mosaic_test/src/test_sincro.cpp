@@ -100,13 +100,13 @@ int main(int argc, char **argv)
       manipulation_msgs::PlaceObjectsGoal place_goal1;
       place_goal1.object_type=pick_ac1.getResult()->object_type;
       place_goal1.object_id=pick_ac1.getResult()->object_id;
-      place_goal1.place_id=item1->first;
+      place_goal1.place_id.push_back(item1->first);
       place_ac1.sendGoal(place_goal1);
 
       manipulation_msgs::PlaceObjectsGoal place_goal2;
       place_goal2.object_type=pick_ac2.getResult()->object_type;
       place_goal2.object_id=pick_ac2.getResult()->object_id;
-      place_goal2.place_id=item2->first;
+      place_goal2.place_id.push_back(item2->first);
       place_ac2.sendGoal(place_goal2);
 
       place_ac1.waitForResult();

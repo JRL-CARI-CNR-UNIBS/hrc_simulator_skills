@@ -63,7 +63,7 @@ public:
       manipulation_msgs::PlaceObjectsGoal place_goal1;
       place_goal1.object_type=pick_ac1.getResult()->object_type;
       place_goal1.object_id=pick_ac1.getResult()->object_id;
-      place_goal1.place_id=item1->first;
+      place_goal1.place_id.push_back(item1->first);
       place_ac1.sendGoal(place_goal1);
 
       place_ac1.waitForResult();
