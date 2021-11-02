@@ -1,0 +1,91 @@
+outbound:
+  slots_group:
+  - {name: "A1_group"}
+  - {name: "A2_group"}
+  - {name: "A3_group"}
+  - {name: "A4_group"}
+  - {name: "A5_group"}
+  - {name: "B1_group"}
+  - {name: "B2_group"}
+  - {name: "B3_group"}
+  - {name: "B4_group"}
+  - {name: "B5_group"}
+  - {name: "C1_group"}
+  - {name: "C2_group"}
+  - {name: "C3_group"}
+  - {name: "C4_group"}
+  - {name: "C5_group"}
+  - {name: "D1_group"}
+  - {name: "D2_group"}
+  - {name: "D3_group"}
+  - {name: "D4_group"}
+  - {name: "D5_group"}
+  - {name: "E1_group"}
+  - {name: "E2_group"}
+  - {name: "E3_group"}
+  - {name: "E4_group"}
+  - {name: "E5_group"}
+  - {name: "F1_group"}
+  - {name: "F2_group"}
+  - {name: "F3_group"}
+  - {name: "F4_group"}
+  - {name: "F5_group"}
+  - {name: "G1_group"}
+  - {name: "G2_group"}
+  - {name: "G3_group"}
+  - {name: "G4_group"}
+  - {name: "G5_group"}
+  - {name: "H1_group"}
+  - {name: "H2_group"}
+  - {name: "H3_group"}
+  - {name: "H4_group"}
+  - {name: "H5_group"}
+  - {name: "I1_group"}
+  - {name: "I2_group"}
+  - {name: "I3_group"}
+  - {name: "I4_group"}
+  - {name: "I5_group"}
+  - {name: "J1_group"}
+  - {name: "J2_group"}
+  - {name: "J3_group"}
+  - {name: "J4_group"}
+  - {name: "J5_group"}
+
+outbound_place_server:
+
+  ik_sol_number: 16
+  max_stall_iter: 160
+  collision_detector: FCL
+
+  groups:
+    ur5_on_guide: tip
+    human_right_arm: RightTip
+
+  ur5_on_guide:
+    preferred_configuration: [0, 0.12148919851174578, -1.5708510080149396, 1.5708846511438024, -1.5707174686924554, -1.570702119416697, 0]
+    preferred_configuration_weight: [0, 0, 1, 1, 1, 1, 0]
+    max_ik_goal_number: 20
+
+    disable_collisions:
+    - Belly
+    - Chest
+    - Head
+    - LeftForeArm
+    - LeftHand
+    - LeftUpperArm
+    - Neck
+    - Pelvis
+    - RightForeArm
+    - RightHand
+    - RightUpperArm
+  human_right_arm:
+    preferred_configuration:  [0.05512000712994486, -4.791260282509029e-05, 2.2936893766745914e-05, -4.4732665177434683e-05, 6.696755304001272e-05, 0.00863087218599394, 0.33846703945393675, 0.7506828152967152, 0.8765038004592526, 0.3644512938509695, -0.017490829046675933, -0.15624173140022904]
+    preferred_configuration_weight: [0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+    max_ik_goal_number: 20
+
+  request_adapters:
+  - default_planner_request_adapters/AddTimeParameterization
+  - default_planner_request_adapters/FixWorkspaceBounds
+  - default_planner_request_adapters/FixStartStateBounds
+  - default_planner_request_adapters/FixStartStateCollision
+  - default_planner_request_adapters/FixStartStatePathConstraints

@@ -1,0 +1,20 @@
+multi_skills:
+  group_name:
+  - "ur5_on_guide"
+  - "human_right_arm"
+
+  recipes:
+  - {name: "first_recipe", recipe: ["go_to_ur5_home","pick_orange_box","place_orange_box","go_to_ur5_home"]}
+  - {name: "second_recipe", recipe: ["go_to_human_home","pick_white_box","place_white_box","go_to_human_home"]}
+
+  tasks:
+  - {name: "go_to_ur5_home",   type: "goto",  description: "", agent: ["ur5_on_guide"],                 goal: ["ur5_home"]}
+  - {name: "go_to_ur5_away",   type: "goto",  description: "", agent: ["ur5_on_guide"],                 goal: ["ur5_away"]}
+  - {name: "go_to_human_home", type: "goto",  description: "", agent: ["human_right_arm"],              goal: ["human_home"]}
+  - {name: "go_to_human_away", type: "goto",  description: "", agent: ["human_right_arm"],              goal: ["human_away"]}
+  - {name: "pick_white_box",   type: "pick",  description: "", agent: ["human_right_arm"],              goal: ["white_box"]}
+  - {name: "pick_orange_box",  type: "pick",  description: "", agent: ["ur5_on_guide"],                 goal: ["orange_box"]}
+  - {name: "pick_blue_box",    type: "pick",  description: "", agent: ["human_right_arm,ur5_on_guide"], goal: ["blue_box"]}
+  - {name: "place_white_box",  type: "place", description: "", agent: ["human_right_arm"],              goal: ["white_box"]}
+  - {name: "place_orange_box", type: "place", description: "", agent: ["ur5_on_guide"],                 goal: ["orange_box"]}
+  - {name: "place_blue_box",   type: "place", description: "", agent: ["human_right_arm,ur5_on_guide"], goal: ["blue_box"]}

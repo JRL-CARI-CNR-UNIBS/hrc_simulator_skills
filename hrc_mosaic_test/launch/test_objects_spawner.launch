@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="name_space" default="/"/>
+  <rosparam command="load" file="$(find hrc_mosaic_test)/config/objects_description.yaml"/>
+
+  <group ns="$(arg name_space)">
+    <rosparam command="load" file="$(find hrc_mosaic_test)/config/test_object_positions.yaml"/>
+    <node pkg="object_loader" name="scene_spawner" type="scene_spawner" output="screen"/>
+  </group>
+
+</launch>

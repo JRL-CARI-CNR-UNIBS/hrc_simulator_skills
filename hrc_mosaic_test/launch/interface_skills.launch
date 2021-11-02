@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<launch>
+<!--
+<arg name="fake_gripper" default="false"/>
+
+<group if="$(arg fake_gripper)">
+  <node pkg="manipulation_fake_tool"  type="manipulation_fake_tool_server" name="manipulation_fake_tool_pick" args="/robotiq_gripper" output="screen"/>
+</group>
+
+<group unless="$(arg fake_gripper)">
+  <node pkg="robotiq_ur_modbus"  type="test_robotiq_ros.py" name="robotiq_ur_modbus_pick" args="/robotiq_gripper" output="screen"/>
+</group>
+-->
+
+<arg name="pipeline" default="dirrt" />
+<arg name="load_param" default="load" />
+<arg name="debug" default="false" />
+<arg name="baseline" default="false"/>
+
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/multi_skills.yaml" />
+
+<include file="$(find hrc_mosaic_test)/launch/interface_pick.launch">
+<arg name="debug" value="$(arg debug)"/>
+<arg name="load_param" value="$(arg load_param)"/>
+<arg name="pipeline" value="$(arg pipeline)"/>
+<arg name="baseline" value="$(arg baseline)"/>
+</include>
+
+
+<include file="$(find hrc_mosaic_test)/launch/interface_place.launch">
+<arg name="debug" value="$(arg debug)"/>
+<arg name="load_param" value="$(arg load_param)"/>
+<arg name="pipeline" value="$(arg pipeline)"/>
+<arg name="baseline" value="$(arg baseline)"/>
+</include>
+
+
+<include file="$(find hrc_mosaic_test)/launch/interface_goto.launch">
+<arg name="debug" value="$(arg debug)"/>
+<arg name="load_param" value="$(arg load_param)"/>
+<arg name="pipeline" value="$(arg pipeline)"/>
+<arg name="baseline" value="$(arg baseline)"/>
+</include>
+
+</launch>

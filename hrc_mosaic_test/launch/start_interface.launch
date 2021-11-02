@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+  <include file="$(find hrc_mosaic_test)/launch/interface_skills.launch" />
+  <include file="$(find manipulation_interface_gui)/launch/interface.launch" />
+</launch>

@@ -1,0 +1,47 @@
+go_to_location:
+  - {name: "ur5_home",   frame: "table", position: [-0.228, 0.745, 0.127], quaternion: [0.761, -0.648, -0.033, 0.014]} #only as example
+  - {name: "ur5_away",   frame: "table", position: [-0.364, 0.420, 0.520], quaternion: [-0.464, -0.462, 0.585, -0.478]} #only as example
+  - {name: "human_home", frame: "table", position: [0.365, 0.864, 0.522],  quaternion: [0.044, 0.653, -0.125, 0.745]} #only as example
+  - {name: "human_away", frame: "table", position: [0.454, 0.705, 0.674],  quaternion: [0.707, 0.707, -0.026, -0.029]} #to be updated
+
+
+go_to_location_server:
+
+  ik_sol_number: 16
+  max_stall_iter: 160
+  collision_detector: FCL
+
+  groups:
+    ur5_on_guide: tip
+    human_right_arm: RightTip
+
+  ur5_on_guide:
+    preferred_configuration: [0, 0.12148919851174578, -1.5708510080149396, 1.5708846511438024, -1.5707174686924554, -1.570702119416697, 0]
+    preferred_configuration_weight: [0, 0, 1, 1, 1, 1, 0]
+    max_ik_goal_number: 20
+    use_single_goal: false
+
+    disable_collisions:
+    - Belly
+    - Chest
+    - Head
+    - LeftForeArm
+    - LeftHand
+    - LeftUpperArm
+    - Neck
+    - Pelvis
+    - RightForeArm
+    - RightHand
+    - RightUpperArm
+
+  human_right_arm:
+    preferred_configuration:  [0.05512000712994486, -4.791260282509029e-05, 2.2936893766745914e-05, -4.4732665177434683e-05, 6.696755304001272e-05, 0.00863087218599394, 0.33846703945393675, 0.7506828152967152, 0.8765038004592526, 0.3644512938509695, -0.017490829046675933, -0.15624173140022904]
+    preferred_configuration_weight: [0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+    max_ik_goal_number: 20
+
+  request_adapters:
+  - default_planner_request_adapters/AddTimeParameterization
+  - default_planner_request_adapters/FixWorkspaceBounds
+  - default_planner_request_adapters/FixStartStateBounds
+  - default_planner_request_adapters/FixStartStateCollision
+  - default_planner_request_adapters/FixStartStatePathConstraints
