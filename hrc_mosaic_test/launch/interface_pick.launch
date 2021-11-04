@@ -22,9 +22,9 @@
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/inbound_server.yaml"/>
 
 <node pkg="inbound_pick" type="inbound_pick_server" name="inbound_pick_server" launch-prefix="$(arg launch_prefix)" output="screen" >
-  <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="manipulator/planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param if="$(eval pipeline == 'dirrt')" name="manipulator/planning_plugin" value="pathplan/DIRRTStar" />
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
   <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
   <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />

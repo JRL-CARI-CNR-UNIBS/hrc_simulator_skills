@@ -1,10 +1,3 @@
-go_to_location:
-  - {name: "ur5_home",   frame: "table", position: [-0.228, 0.745, 0.127], quaternion: [0.761, -0.648, -0.033, 0.014]} #only as example
-  - {name: "ur5_away",   frame: "table", position: [-0.364, 0.420, 0.520], quaternion: [-0.464, -0.462, 0.585, -0.478]} #only as example
-  - {name: "human_home", frame: "table", position: [0.365, 0.864, 0.522],  quaternion: [0.044, 0.653, -0.125, 0.745]} #only as example
-  - {name: "human_away", frame: "table", position: [0.454, 0.705, 0.674],  quaternion: [0.707, 0.707, -0.026, -0.029]} #to be updated
-
-
 go_to_location_server:
 
   ik_sol_number: 16

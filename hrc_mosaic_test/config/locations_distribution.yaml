@@ -1,0 +1,5 @@
+go_to_location:
+  - {name: "ur5_home",   frame: "table", position: [1.596, -1.358, 0.299], quaternion: [-0.031, 0.999, 0.004, -0.017]} #only as example
+  - {name: "ur5_away",   frame: "table", position: [1.596, -1.558, 0.299], quaternion: [-0.031, 0.999, 0.004, -0.017]} #only as example
+  - {name: "human_home", frame: "table", position: [0.496, -1.358, 0.299], quaternion: [ 0.044, 0.653, -0.125, 0.745]} #only as example
+  - {name: "human_away", frame: "table", position: [0.000, -1.358, 0.299], quaternion: [ 0.044, 0.653, -0.125, 0.745]} #to be updated

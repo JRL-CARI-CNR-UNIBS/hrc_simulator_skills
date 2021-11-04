@@ -16,12 +16,12 @@
 <!--<rosparam if="$(arg baseline)" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning_base.yaml" ns="outbound_place_server"/>
 <rosparam unless="$(arg baseline)" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml" ns="outbound_place_server"/>-->
 
-<rosparam command="load" file="$(find sharework_cembre_skills)/config/outbound_server.yaml"/>
+<rosparam command="load" file="$(find hrc_mosaic_test)/config/outbound_server.yaml"/>
 
 <node pkg="outbound_place"  type="outbound_place_server" name="outbound_place_server" output="screen" launch-prefix="$(arg launch_prefix)"  >
-  <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="manipulator/planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param if="$(eval pipeline == 'dirrt')" name="manipulator/planning_plugin" value="pathplan/DIRRTStar" />
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
   <param name="ur5_on_guide/use_single_goal" value="$(arg single_goal)"/>
   <param name="ur5_on_guide/use_disable_collisions" value="$(arg disable_collision)"/>
   <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />

@@ -50,3 +50,55 @@ outbound:
   - {name: "J3", slots_group: "J3_group", frame: "conveyor_system", max_objects: 1, position: [1.00, 0.22, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
   - {name: "J4", slots_group: "J4_group", frame: "conveyor_system", max_objects: 1, position: [1.00, 0.28, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
   - {name: "J5", slots_group: "J5_group", frame: "conveyor_system", max_objects: 1, position: [1.00, 0.34, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+
+  slots_group:
+  - {name: "A1_group"}
+  - {name: "A2_group"}
+  - {name: "A3_group"}
+  - {name: "A4_group"}
+  - {name: "A5_group"}
+  - {name: "B1_group"}
+  - {name: "B2_group"}
+  - {name: "B3_group"}
+  - {name: "B4_group"}
+  - {name: "B5_group"}
+  - {name: "C1_group"}
+  - {name: "C2_group"}
+  - {name: "C3_group"}
+  - {name: "C4_group"}
+  - {name: "C5_group"}
+  - {name: "D1_group"}
+  - {name: "D2_group"}
+  - {name: "D3_group"}
+  - {name: "D4_group"}
+  - {name: "D5_group"}
+  - {name: "E1_group"}
+  - {name: "E2_group"}
+  - {name: "E3_group"}
+  - {name: "E4_group"}
+  - {name: "E5_group"}
+  - {name: "F1_group"}
+  - {name: "F2_group"}
+  - {name: "F3_group"}
+  - {name: "F4_group"}
+  - {name: "F5_group"}
+  - {name: "G1_group"}
+  - {name: "G2_group"}
+  - {name: "G3_group"}
+  - {name: "G4_group"}
+  - {name: "G5_group"}
+  - {name: "H1_group"}
+  - {name: "H2_group"}
+  - {name: "H3_group"}
+  - {name: "H4_group"}
+  - {name: "H5_group"}
+  - {name: "I1_group"}
+  - {name: "I2_group"}
+  - {name: "I3_group"}
+  - {name: "I4_group"}
+  - {name: "I5_group"}
+  - {name: "J1_group"}
+  - {name: "J2_group"}
+  - {name: "J3_group"}
+  - {name: "J4_group"}
+  - {name: "J5_group"}

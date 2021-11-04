@@ -20,9 +20,9 @@
 <rosparam command="load" file="$(find hrc_mosaic_test)/config/go_to_location_server.yaml"/>
 
 <node pkg="go_to_location"  type="go_to_location_server" name="go_to_location_server" output="screen" launch-prefix="$(arg launch_prefix)" >
-  <param if="$(eval pipeline == 'ompl')" name="manipulator/planning_plugin" value="ompl_interface/OMPLPlanner" />
-  <param if="$(eval pipeline == 'human_aware')" name="manipulator/planning_plugin" value="ha_planner/DgacoPlannerManager" />
-  <param if="$(eval pipeline == 'dirrt')" name="manipulator/planning_plugin" value="pathplan/DIRRTStar" />
+  <param if="$(eval pipeline == 'ompl')" name="ur5_on_guide/planning_plugin" value="ompl_interface/OMPLPlanner" />
+  <param if="$(eval pipeline == 'human_aware')" name="ur5_on_guide/planning_plugin" value="ha_planner/DgacoPlannerManager" />
+  <param if="$(eval pipeline == 'dirrt')" name="ur5_on_guide/planning_plugin" value="pathplan/DIRRTStar" />
   <param name="human_right_arm/planning_plugin" value="$(arg mao_planner)" />
   <remap from="/centroids" to="/centroid_detection_rs1/poses" />
   <remap from="/go_to_location_server/job/go_to" to="/robotiq_gripper"/>
