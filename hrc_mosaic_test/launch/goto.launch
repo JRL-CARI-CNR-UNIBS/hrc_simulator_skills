@@ -11,8 +11,8 @@
 <arg unless="$(arg debug)" name="launch_prefix" default="" />
 <arg name="disable_collision" default="false" />
 
-<rosparam if="$(eval pipeline == 'human_aware')" command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml"/>
-<rosparam if="$(eval pipeline == 'dirrt')" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml"/>
+<rosparam if="$(eval pipeline == 'human_aware')" command="load" file="$(find hrc_simulator_moveit_config)/config/ha_planning.yaml" ns="go_to_location_server"/>
+<rosparam if="$(eval pipeline == 'dirrt')" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml" ns="go_to_location_server"/>
 <!--<rosparam if="$(arg baseline)" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning_base.yaml" ns="go_to_location_server"/>
 <rosparam unless="$(arg baseline)" command="load" file="$(find hrc_simulator_moveit_config)/config/dirrt_planning.yaml" ns="go_to_location_server"/>-->
 

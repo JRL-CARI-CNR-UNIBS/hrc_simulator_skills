@@ -1,0 +1,6 @@
+scene_objects:
+# - {type: "mounting_plateA", frame: "table", position: [ 0.300, 0.500, 0.160], quaternion: [0,0,0,1]}
+# - {type: "mounting_plateA_upper_part", frame: "table", position: [ 0.300, 0.5175, 0.206], quaternion: [0,0,0,1]}
+# - {type: "mounting_plateA_slide", frame: "table", position: [ 0.300, 0.555, 0.206], quaternion: [0,0,0,1]}
+# - {type: "outbound_box", frame: "world", position: [ 0.527, 0.553,  0.9], quaternion: [0.703, 0.711, 0.015, 0.016]}
+# - {type: "outbound_box", frame: "world", position: [ 0.530, -0.400, 0.9], quaternion: [0.703, 0.711, 0.015, 0.016]}
