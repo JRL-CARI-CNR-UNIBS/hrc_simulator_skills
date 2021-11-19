@@ -1,6 +1,6 @@
 outbound_place_server:
 
-  ik_sol_number: 16
+  ik_sol_number: 160
   max_stall_iter: 160
   collision_detector: FCL
 
@@ -11,7 +11,9 @@ outbound_place_server:
   ur5_on_guide:
     preferred_configuration: [0, 0.12148919851174578, -1.5708510080149396, 1.5708846511438024, -1.5707174686924554, -1.570702119416697, 0]
     preferred_configuration_weight: [0, 0, 1, 1, 1, 1, 0]
-    max_ik_goal_number: 20
+    max_ik_goal_number: 32
+    upper_bound: [1.45,  3.1416,  0.0000 ,  2.792,  3.1416,  3.1416,  3.1416 ]
+    lower_bound: [0.00, -3.1416, -3.1416 , -2.792, -3.1416, -3.1416, -3.1416 ]
 
     disable_collisions:
     - Belly
