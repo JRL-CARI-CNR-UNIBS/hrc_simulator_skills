@@ -1,5 +1,5 @@
 go_to_location:
-  - {name: "ur5_home",   frame: "table", position: [1.596, -1.358, 0.299], quaternion: [-0.031, 0.999, 0.004, -0.017]} #only as example
-  - {name: "ur5_away",   frame: "table", position: [1.596, -1.558, 0.299], quaternion: [-0.031, 0.999, 0.004, -0.017]} #only as example
-  - {name: "human_home", frame: "table", position: [0.496, -1.358, 0.299], quaternion: [ 0.044, 0.653, -0.125, 0.745]} #only as example
-  - {name: "human_away", frame: "table", position: [0.000, -1.358, 0.299], quaternion: [ 0.044, 0.653, -0.125, 0.745]} #to be updated
+  - {name: "ur5_home",   frame: "world", position: [0.705, -0.374, 1.299], quaternion: [0.685,  0.728, 0.015, -0.009]}
+  - {name: "ur5_away",   frame: "world", position: [1.299, -0.350, 1.422], quaternion: [0.652,  0.726, 0.028, -0.218]}
+  - {name: "human_home", frame: "world", position: [0.437, 1.499, 1.158], quaternion: [-0.493, -0.430, 0.616, -0.439]}
+  - {name: "human_away", frame: "world", position: [0.446, 1.921, 1.154], quaternion: [-0.493, -0.430, 0.616, -0.439]}
