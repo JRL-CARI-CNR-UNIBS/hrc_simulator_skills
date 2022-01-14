@@ -13,10 +13,10 @@
 </group>
 -->
 <arg name="pipeline" default="dirrt" />
-<arg name="load_param" default="load" />
+<arg name="load_param" default="true" />
 <arg name="debug" default="false" />
 <arg name="baseline" default="false"/>
-
+<rosparam if="$(arg load_param)" command="load" file="$(find hrc_mosaic_test)/config/ik.yaml"/>
 <!--<include file="$(find hrc_mosaic_test)/launch/static_scene.launch"/> -->
 
 <include file="$(find hrc_mosaic_test)/launch/pick.launch">
