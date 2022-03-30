@@ -25,14 +25,20 @@
 <arg name="load_param" value="$(arg load_param)"/>
 <arg name="pipeline" value="$(arg pipeline)"/>
 <arg name="baseline" value="$(arg baseline)"/>
+<arg name="objects_description_file" value="agents_synergy_test/objects_description"/>
+<arg name="objects_distribution_file" value="agents_synergy_test/objects_distribution"/>
+<arg name="objects_grasp_description_file" value="agents_synergy_test/objects_grasp_description"/>
+<arg name="boxes_distribution_file" default="agents_synergy_test/boxes_distribution" />
+
 </include>
 
 
 <include file="$(find hrc_mosaic_test)/launch/place.launch">
 <arg name="debug" value="$(arg debug)"/>
 <arg name="load_param" value="$(arg load_param)"/>
-<arg name="pipeline" value="$(arg pipeline)"/>
+<arg name="pipeline" value="$(arg pipeline)"/>/
 <arg name="baseline" value="$(arg baseline)"/>
+<arg name="slots_distribution_file" value="agents_synergy_test/slots_distribution"/>
 </include>
 
 
@@ -42,5 +48,6 @@
 <arg name="pipeline" value="$(arg pipeline)"/>
 <arg name="baseline" value="$(arg baseline)"/>
 </include>
+
 
 </launch>

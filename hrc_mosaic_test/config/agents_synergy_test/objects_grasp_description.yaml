@@ -1,0 +1,85 @@
+manipulation_object_types:
+- {
+      "type": "white_box",
+      "grasp_poses": [{
+          "position": [0, 0, 0.005],
+          "quaternion": [1, 0, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "RightTip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }, {
+          "position": [0, 0.0, 0.005],
+          "quaternion": [0, 1, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "RightTip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }]
+  }
+- {
+      "type": "orange_box",
+      "grasp_poses": [{
+          "position": [0, 0, 0.005],
+          "quaternion": [1, 0, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "tip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }, {
+          "position": [0, 0.0, 0.005],
+          "quaternion": [0, 1, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "tip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }]
+  }
+- {
+      "type": "blue_box",
+      "grasp_poses": [{
+          "position": [0, 0, 0.005],
+          "quaternion": [1, 0, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "tip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }, {
+          "position": [0, 0.0, 0.005],
+          "quaternion": [0, 1, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "tip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }, {
+          "position": [0, 0, 0.005],
+          "quaternion": [1, 0, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "RightTip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      },{
+          "position": [0, 0.0, 0.005],
+          "quaternion": [0, 1, 0, 0],
+          "approach_distance": [0, 0, -0.1],
+          "leave_distance": [0, 0, -0.1],
+          "tool": "RightTip",
+          "pre_gripper_position": 85.0,
+          "post_gripper_position": 0.0,
+          "gripper_force": 100.0
+      }]
+  }

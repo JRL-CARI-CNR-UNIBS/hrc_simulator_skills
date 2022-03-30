@@ -1,0 +1,12 @@
+inbound:
+  boxes:
+  - {name: "human_desk",     frame: "tabletop",        position: [ 0.25, 0.10, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  - {name: "robot_desk1",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  - {name: "robot_desk2",    frame: "shopdesk",        position: [ 0.24, 0.27, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  - {name: "robot_desk3",    frame: "shopdesk",        position: [ 0.24, 0.33, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  - {name: "robot_desk4",    frame: "shopdesk",        position: [-0.24, 0.27, 0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  - {name: "common_desk1",   frame: "conveyor_system", position: [ 1.74, 0.22 ,0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  # - {name: "common_desk1",   frame: "conveyor_system", position: [ 2.14, 0.22 ,0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  # - {name: "common_desk2",   frame: "conveyor_system", position: [ 2.70, 0.22 ,0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  # - {name: "common_desk3",   frame: "conveyor_system", position: [ 2.38, 0.22 ,0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }
+  # - {name: "common_desk4",   frame: "conveyor_system", position: [ 1.90, 0.22 ,0.05], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.1], leave_distance: [0, 0, -0.1] }

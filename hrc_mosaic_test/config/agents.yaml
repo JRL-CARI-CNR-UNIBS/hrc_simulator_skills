@@ -1,0 +1,12 @@
+agents:
+  - ur5_on_guide
+  - human_right_arm
+# test:
+#   a: ur5_on_guide
+#   b:
+#     - human_right_arm
+#     - ciao
+
+#agents:
+#  robot: ur5_on_guide
+#  human: human_right_arm
