@@ -1,0 +1,8 @@
+prefix=/home/samuele/projects/cells_ws/src/hrc_simulator/hrc_simulator_skills/hrc_mosaic_test/build/devel
+
+Name: hrc_mosaic_test
+Description: Description of hrc_mosaic_test
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: manipulation_msgs object_loader roscpp

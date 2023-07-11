@@ -2,7 +2,7 @@ manipulation_object_types:
 - {
       "type": "white_box",
       "grasp_poses": [{
-          "position": [0, 0, 0.005],
+          "position": [0, 0, 0.01],
           "quaternion": [1, 0, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -11,7 +11,7 @@ manipulation_object_types:
           "post_gripper_position": 0.0,
           "gripper_force": 100.0
       }, {
-          "position": [0, 0.0, 0.005],
+          "position": [0, 0.0, 0.01],
           "quaternion": [0, 1, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -24,7 +24,7 @@ manipulation_object_types:
 - {
       "type": "orange_box",
       "grasp_poses": [{
-          "position": [0, 0, 0.005],
+          "position": [0, 0, 0.009],
           "quaternion": [1, 0, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -33,7 +33,7 @@ manipulation_object_types:
           "post_gripper_position": 0.0,
           "gripper_force": 100.0
       }, {
-          "position": [0, 0.0, 0.005],
+          "position": [0, 0.0, 0.009],
           "quaternion": [0, 1, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -46,7 +46,7 @@ manipulation_object_types:
 - {
       "type": "blue_box",
       "grasp_poses": [{
-          "position": [0, 0, 0.005],
+          "position": [0, 0, 0.009],
           "quaternion": [1, 0, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -55,7 +55,7 @@ manipulation_object_types:
           "post_gripper_position": 0.0,
           "gripper_force": 100.0
       }, {
-          "position": [0, 0.0, 0.005],
+          "position": [0, 0.0, 0.009],
           "quaternion": [0, 1, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -64,7 +64,7 @@ manipulation_object_types:
           "post_gripper_position": 0.0,
           "gripper_force": 100.0
       }, {
-          "position": [0, 0, 0.005],
+          "position": [0, 0, 0.009],
           "quaternion": [1, 0, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
@@ -73,7 +73,7 @@ manipulation_object_types:
           "post_gripper_position": 0.0,
           "gripper_force": 100.0
       },{
-          "position": [0, 0.0, 0.005],
+          "position": [0, 0.0, 0.009],
           "quaternion": [0, 1, 0, 0],
           "approach_distance": [0, 0, -0.1],
           "leave_distance": [0, 0, -0.1],
