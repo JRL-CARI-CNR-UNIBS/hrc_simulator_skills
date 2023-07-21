@@ -52,30 +52,30 @@ outbound:
   # - {name: "J5", slots_group: "J5_group", frame: "conveyor_system", max_objects: 1, position: [1.00, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 
 ## ROBOT SLOT
-  - {name: "AR1", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.66, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AR1", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.76, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
  # - {name: "AH2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.66, 0.16, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "AR2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.66, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AR2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.76, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "AH4", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.66, 0.28, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "AR3", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.66, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-# SALTO UNA COLONNA 0.6 
-  - {name: "BR1", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.54, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AR3", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.76, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+# SALTO UNA COLONNA 0.6
+  - {name: "BR1", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.64, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "BH2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.54, 0.16, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "BR2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.54, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "BR2", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.64, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "BH4", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.54, 0.28, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "BR3", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.54, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "BR3", slots_group: "robot_group", frame: "conveyor_system", max_objects: 1, position: [2.64, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 
 ## HUMAN SLOT
-  - {name: "AH1", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.94, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AH1", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.84, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
  # - {name: "AH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.94, 0.16, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "AH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.94, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.84, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "AH4", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [1.06, 0.28, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "AH3", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.94, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-# SALTO UNA COLONNA 0.6 
-  - {name: "BH1", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.82, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "AH3", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.84, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+# SALTO UNA COLONNA 0.6
+  - {name: "BH1", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.72, 0.10, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "BH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.82, 0.16, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "BH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.82, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "BH2", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.72, 0.22, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 #  - {name: "BH4", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.82, 0.28, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
-  - {name: "BH3", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.82, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
+  - {name: "BH3", slots_group: "human_group", frame: "conveyor_system", max_objects: 1, position: [0.72, 0.34, 0.1], quaternion: [1, 0, 0, 0], approach_distance: [0, 0, -0.07], leave_distance: [0, 0, -0.07]}
 
 
   slots_group:
